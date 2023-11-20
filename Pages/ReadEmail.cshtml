@@ -1,0 +1,18 @@
+﻿@page
+@model FinalProject.Pages.ReadEmailModel
+@{
+    ViewData["Title"] = "Read Email";
+}
+
+<h2>@Model.EmailSubject</h2>
+<p>From: @Model.EmailSender</p>
+<p>Sent on: @Model.EmailDate</p>
+
+<div>
+    @Html.Raw(Model.EmailMessage)
+</div>
+<br />
+<br />
+<form method="post">
+    <a asp-page="/Index" class="btn btn-primary">Back</a>
+</form>
